@@ -1,3 +1,4 @@
+//Crown logo svg that is displayed in the header. Logo code used from section 9 treehouse lessons. 
 import React from 'react';
 
 const Logo = () =>

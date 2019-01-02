@@ -9,18 +9,19 @@ export default class Search extends Component{
   onSearchChange = e => {
     this.setState({searchText: e.target.value});
   }
-
+//handleSubmit function stores path into history and fires function onSearch with the searched query value. It also prevents page refresh default and resets the search bar back to empty.
   handleSubmit = e => {
     e.preventDefault();
+    this.props.loading();
     let path = `/search/${this.query.value}`;
     this.props.history.push(path);
     this.props.onSearch(this.query.value);
-
     e.currentTarget.reset();
   }
 
   render() {
     return (
+//Form created for search bar. ref equals user input.
       <form className="search-form" onSubmit={this.handleSubmit} >
             <input type="search"
                    onChange={this.onSearchChange}

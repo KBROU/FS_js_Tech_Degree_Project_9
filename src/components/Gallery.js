@@ -1,3 +1,4 @@
+//Takes single GalleryItem item image and runs it through a map loop to add all the images to the variable pics. Pics is returned inside ul tags. Topic is added to the h2 tag to display the topic searched or selected.
 import React from 'react';
 import GalleryItem from './GalleryItem';
 import NoResults from './NoResults';
@@ -12,7 +13,6 @@ const Gallery = props => {
       <GalleryItem url={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`} key={pic.id} />
     );
   } else {
-    //pics = `No search results for ${topic}. Please `;
     pics = <NoResults />
   }
 

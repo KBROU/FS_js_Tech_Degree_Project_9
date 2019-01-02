@@ -1,3 +1,4 @@
+//URL Error component. This js file displays an error message when called.
 import React from 'react';
 
 const URLError = () =>(

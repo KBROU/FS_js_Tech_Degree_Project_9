@@ -1,45 +1,15 @@
+//Creates a navigation bar with the three default items. When user clicks one of the buttons onSearch is fired which fires perfromSearch in App.js. Perform search will search the default item in Flicr image data base.
 import React from 'react';
-import { Route, NavLink, Redirect } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 const Nav = props => (
   <nav className="main-nav">
     <ul>
-    <li><NavLink to={`/dogs`} onClick={() => {props.onSearch('dogs')}}>Dogs</NavLink ></li>
-    <li><NavLink to={`/soccer`} onClick={() => {props.onSearch('soccer')}}>Soccer</NavLink ></li>
-    <li><NavLink to={`/space`} onClick={() => {props.onSearch('space')}}>Space</NavLink ></li>
+    <li><NavLink to={`/dogs`} onClick={() => {props.onSearch('dogs'); props.loading()}}>Dogs</NavLink ></li>
+    <li><NavLink to={`/soccer`} onClick={() => {props.onSearch('soccer'); props.loading()}}>Soccer</NavLink ></li>
+    <li><NavLink to={`/space`} onClick={() => {props.onSearch('space'); props.loading()}}>Space</NavLink ></li>
     </ul>
   </nav>
 );
-
 
 export default Nav;
-
-//Notes
-/*
-<li><NavLink to={`/dogs`} onClick={() => {props.onSearch('dogs')}}>Dogs</NavLink ></li>
-<li><NavLink to={`/soccer`} onClick={() => {props.onSearch('soccer')}}>Soccer</NavLink ></li>
-
-This code below is working
-const navLinks = props.linkExt.map((link, i) =>
-  <li key={i}>
-    <NavLink
-      to={`/${link}`}
-      onClick={() => {
-          props.onSearch(link);
-        }
-      }
-    >
-      {link}
-    </NavLink>
-  </li>
-);
-return (
-  <nav className="main-nav">
-    <ul>
-      {navLinks}
-    </ul>
-  </nav>
-);
-};
- */

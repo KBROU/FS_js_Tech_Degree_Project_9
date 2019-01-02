@@ -1,3 +1,4 @@
+//No Results component. This js file displays a message that no search results were found.
 import React from 'react';
 
 const NoResults = () =>(
