@@ -1,6 +1,15 @@
 # FS_js_Tech_Degree_Project_9
 Gallery App Built with React
 
+## Before Running npm start
+1. Create an js file called config.js and store it in the components folder.
+2. In config.js create a const called apiKey and set it equal to your Flicr personal API key.
+3. In config.js write <export default apiKey;> so it can be used by App.js.<br>
+Example Code for config.js where xxxxxx is equal to your API key:<br>
+
+const apiKey = 'xxxxxx';<br>
+export default apiKey;<br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
