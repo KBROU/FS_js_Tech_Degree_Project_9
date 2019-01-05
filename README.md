@@ -7,8 +7,8 @@ Gallery App Built with React
 3. In config.js write <export default apiKey;> so it can be used by App.js.<br>
 Example Code for config.js where xxxxxx is equal to your API key:<br>
 
-  const apiKey = 'xxxxxx';<br>
-  export default apiKey;<br>
+<p>const apiKey = 'xxxxxx';</p><br>
+export default apiKey;<br>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
